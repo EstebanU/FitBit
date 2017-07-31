@@ -1,3 +1,6 @@
+Click here to open in browser
+https://estebanu.github.io/FitBit/
+
 ## FitBit Motion Sensor Activity
 E. Urdiales  
 
