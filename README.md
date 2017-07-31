@@ -122,7 +122,7 @@ g <- g + geom_tile(aes(fill = Freq)) + geom_text(aes(label = round(Freq, 2))) +
 g
 ```
 
-![](FitBit_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](FitBit_files/figure-html/unnamed-chunk-8-1.png)
 
 # Conclusion
 
