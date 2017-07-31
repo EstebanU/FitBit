@@ -1,7 +1,7 @@
-# FitBit Motion Sensor Activity
+## FitBit Motion Sensor Activity
 E. Urdiales  
 
-# Executive Summary
+## Executive Summary
 The puropse of this assignment is to determine whether six participants executed a barbell
 lift correctly. Sensors were placed on different areas of the body and dumbell and measurements
 were recorded. There are correct and incorrect ways to do the exercise and based on the 
@@ -19,7 +19,7 @@ download.file(url_train, "HAR_Data.csv")
 HAR_data <- read.csv("HAR_data.csv", stringsAsFactors = FALSE)
 ```
 
-# Data Cleaning
+## Data Cleaning
 By inspection, there are 100 variables that have very sparse data. The only entries that
 have values correspond to when the variable `new_window` has value `yes`. Since the test data has 
 this variable as `no`, we disregard all rows where the `new window` varibale is `yes`. There are
@@ -48,7 +48,7 @@ HAR_data <- HAR_data[, 8:ncol(HAR_data)]
 HAR_data$classe <- as.factor(HAR_data$classe)
 ```
 
-# Cross Validation, Preprocessing, and Model Selection
+## Cross Validation, Preprocessing, and Model Selection
 The cross validation was done by using *random subsampling*. The training data consisted of 
 75% of the samples and by default, the testing data contained 25% of the samples. 
 
@@ -118,7 +118,7 @@ g
 
 ![](unnamed-chunk-8-1.png)
 
-# Conclusion
+## Conclusion
 
 It is important to note that although boosting provided a much better estimate for the out of
 sample error (~1%), I wanted to avoid overfitting. The estimated out of sample error (~11%)
@@ -127,7 +127,7 @@ executed exactly according to specification were denoted by class A. A near perf
 of the movement was recorded 96.78% of the time. 
 
 
-# Appendix: Test Data
+## Appendix: Test Data
 
 ```r
 test_data <- read.csv("pml-testing.csv", stringsAsFactors = FALSE)
